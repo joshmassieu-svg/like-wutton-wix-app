@@ -1,0 +1,60 @@
+{
+  "collections": [
+    {
+      "id": "ItemLikes",
+      "displayName": "Item Likes",
+      "displayField": "compId",
+      "permissions": {
+        "insert": "ANYONE",
+        "update": "ADMIN",
+        "remove": "ADMIN",
+        "read": "ANYONE"
+      },
+      "fields": [
+        {
+          "key": "compId",
+          "displayName": "Component ID",
+          "type": "TEXT",
+          "encrypted": false
+        },
+        {
+          "key": "visitorId",
+          "displayName": "Visitor ID",
+          "type": "TEXT",
+          "encrypted": false
+        },
+        {
+          "key": "likedAt",
+          "displayName": "Liked At",
+          "type": "DATETIME",
+          "encrypted": false
+        }
+      ]
+    },
+    {
+      "id": "LikeCounts",
+      "displayName": "Like Counts",
+      "displayField": "compId",
+      "permissions": {
+        "insert": "ADMIN",
+        "update": "ADMIN",
+        "remove": "ADMIN",
+        "read": "ANYONE"
+      },
+      "fields": [
+        {
+          "key": "compId",
+          "displayName": "Component ID",
+          "type": "TEXT",
+          "encrypted": false
+        },
+        {
+          "key": "count",
+          "displayName": "Like Count",
+          "type": "NUMBER",
+          "encrypted": false
+        }
+      ]
+    }
+  ]
+}
